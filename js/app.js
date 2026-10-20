@@ -4,9 +4,9 @@ import { PrintResumeButton } from './components/PrintResumeButton.js';
 import { DownloadResumeButton } from './components/DownloadResumeButton.js';
 
 /**
- * Main Portfolio Application Orchestrator
+ * Main Application Orchestrator
  */
-class PortfolioApp {
+class ResumeApp {
   constructor() {
     this.pdfUrl = './assets/GuruCharan_Resume.pdf';
     this.pdfFileName = 'GuruCharan_Resume.pdf';
@@ -23,7 +23,7 @@ class PortfolioApp {
   }
 
   init() {
-    console.info('Initializing GuruCharan Tanneeru Portfolio Application...');
+    console.info('Initializing GuruCharan Tanneeru Application...');
 
     // 1. Initialize Reusable Master PDF Components
     this.printer = new PrintResumeButton({
@@ -52,7 +52,7 @@ class PortfolioApp {
     // 6. Dynamic Year & Global Keyboard Shortcuts
     this.initGlobalFeatures();
 
-    console.info('Portfolio Application initialized successfully.');
+    console.info('Application initialized successfully.');
   }
 
   initHeaderAndNav() {
@@ -295,6 +295,6 @@ class PortfolioApp {
 
 // Bootstrap on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  const app = new PortfolioApp();
+  const app = new ResumeApp();
   app.init();
 });
