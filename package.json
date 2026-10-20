@@ -1,0 +1,20 @@
+{
+  "name": "gurucharan-resume-website",
+  "version": "1.0.0",
+  "description": "Pixel-Perfect Resume Website for GuruCharan Tanneeru, PMP® with Exact Master PDF Printing",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js"
+  },
+  "keywords": [
+    "resume",
+    "pdf",
+    "gurucharan",
+    "pmp",
+    "ai-implementation",
+    "portfolio"
+  ],
+  "author": "GuruCharan Tanneeru",
+  "license": "MIT"
+}
