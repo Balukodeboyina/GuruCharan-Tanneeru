@@ -6,55 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
   <title>GuruCharan Tanneeru, PMP® | AI Implementation & Technical Program Management</title>
-  <meta name="description" content="Official Professional Resume of GuruCharan Tanneeru, PMP®. Specializing in AI Implementation, Technical Program Management, and API Integrations. View, print, or download the authoritative master PDF.">
+  <meta name="description" content="Portfolio of GuruCharan Tanneeru, PMP®. Specializing in AI Implementation, Technical Program Management, Enterprise Workflow Automation, and API Integrations.">
   <meta name="author" content="GuruCharan Tanneeru">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="GuruCharan Tanneeru, PMP® | Professional Resume">
-  <meta property="og:description" content="AI Implementation | Technical Program Management | API Integrations">
+  <meta property="og:title" content="GuruCharan Tanneeru, PMP® | Portfolio & Technology Leadership">
+  <meta property="og:description" content="Turning Complex Technology Into Scalable Business Outcomes. AI Implementation • Technical Program Management • API Integrations.">
   <meta property="og:type" content="website">
 
-  <!-- Inter Web Font -->
+  <!-- Inter & JetBrains Mono Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a192f'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='50' font-weight='bold' fill='%23ffffff'>G</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230a192f'/><text x='50%' y='58%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='50' font-weight='bold' fill='%2322d3ee'>GT</text></svg>">
 </head>
 <body>
-  <!-- Skip Link for Accessibility -->
+  <!-- Accessibility Skip Link -->
   <a href="#mainContent" class="skip-link">Skip to main content</a>
 
-  <!-- Sticky Header -->
-  <header class="site-header" role="banner">
+  <!-- =========================================================
+       1. STICKY NAVIGATION BAR
+       ========================================================= -->
+  <header class="site-header" id="siteHeader" role="banner">
     <div class="header-container">
-      <div class="brand">
-        <div class="brand-badge" aria-hidden="true">GT</div>
+      <a href="#home" class="brand-link" aria-label="GuruCharan Tanneeru - Home">
+        <div class="brand-monogram" aria-hidden="true">GT</div>
         <div class="brand-text">
           <h1>GuruCharan Tanneeru</h1>
           <p>PMP® • AI & Program Management</p>
         </div>
-      </div>
+      </a>
 
-      <nav class="header-nav" aria-label="Main Navigation">
-        <a href="#overview">Overview</a>
-        <a href="#resumePreviewSection">PDF Preview</a>
-        <a href="#experienceHighlights">Key Highlights</a>
-        <a href="#credentials">Certifications</a>
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#expertise" class="nav-link">Expertise</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
+      <!-- Header Actions -->
       <div class="header-actions">
-        <button type="button" class="btn btn-secondary btn-sm" id="headerViewBtn" title="View interactive master PDF">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-            <circle cx="12" cy="12" r="3"></circle>
+        <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf" class="btn btn-secondary btn-sm" id="headerDownloadResumeBtn" title="Download Master PDF Resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          <span>View</span>
-        </button>
+          <span>Download Resume</span>
+        </a>
 
-        <button type="button" class="btn btn-primary btn-sm btn-print" id="headerPrintBtn" title="Print original 3-page PDF directly">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <button type="button" class="btn btn-primary btn-sm" id="headerPrintResumeBtn" title="Print Master 3-Page PDF Directly">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="6 9 6 2 18 2 18 9"></polyline>
             <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
             <rect x="6" y="14" width="12" height="8"></rect>
@@ -62,129 +70,1003 @@
           <span>Print</span>
         </button>
 
-        <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf" class="btn btn-download btn-sm" id="headerDownloadBtn" title="Download unmodified master PDF">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
+        <!-- Mobile Menu Toggle Button -->
+        <button type="button" class="menu-toggle-btn" id="mobileMenuToggleBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
           </svg>
-          <span>PDF</span>
-        </a>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content Anchor -->
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#expertise" class="mobile-nav-link">Expertise</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#projects" class="mobile-nav-link">Projects</a>
+    <a href="#certifications" class="mobile-nav-link">Certifications</a>
+    <a href="#resume" class="mobile-nav-link">Resume Document</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf" class="btn btn-primary" style="width: 100%;">Download Resume PDF</a>
+      <button type="button" class="btn btn-secondary" id="mobilePrintBtn" style="width: 100%;">Print Resume PDF</button>
+    </div>
+  </div>
+
   <main id="mainContent" role="main">
-    <!-- Mount Point: ResumeHero Component -->
-    <div id="heroMountPoint"></div>
-
-    <!-- Mount Point: ResumePreview Component -->
-    <div id="previewMountPoint"></div>
-
-    <!-- Experience & Accomplishments strictly from the Master Resume -->
-    <section class="preview-section" id="experienceHighlights" style="padding-top: 0;" aria-label="Professional Experience Summary">
-      <div class="summary-card" style="box-shadow: var(--shadow-md);">
-        <h2>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-          </svg>
-          Enterprise Roles & Verified Experience
-        </h2>
-
-        <div style="display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1rem;">
-          <div style="border-left: 3px solid var(--navy-800); padding-left: 1rem;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;">
-              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy-950);">Technical Program Manager — General Electric (GE)</h3>
-              <span style="font-size: 0.8rem; font-weight: 600; color: var(--slate-500);">June 2025 – March 2026</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--navy-700); font-weight: 500; margin-bottom: 0.4rem;">Consultant — PERSOL India</div>
-            <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.55;">
-              Led enterprise technology implementation initiatives by translating business unit requirements into technical workflows, solution delivery plans, and client adoption roadmaps. Managed delivery dependencies across three global regions, supported document intelligence and workflow automation, and spearheaded reporting data-validation improvements yielding a reported 30% improvement in reporting accuracy.
-            </p>
+    <!-- =========================================================
+         2. HERO SECTION (TWO-COLUMN TECH LEADERSHIP)
+         ========================================================= -->
+    <section class="hero-section" id="home" aria-label="Hero Introduction">
+      <div class="hero-grid">
+        <!-- Left Column -->
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span>
+            <span>AI Implementation • Technical Program Management</span>
           </div>
 
-          <div style="border-left: 3px solid var(--navy-700); padding-left: 1rem;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;">
-              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy-950);">Data Analyst — General Electric (GE)</h3>
-              <span style="font-size: 0.8rem; font-weight: 600; color: var(--slate-500);">March 2024 – May 2025</span>
-            </div>
-            <div style="font-size: 0.85rem; color: var(--navy-700); font-weight: 500; margin-bottom: 0.4rem;">Consultant — PERSOL India</div>
-            <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.55;">
-              Configured and maintained enterprise data workflows, operational dashboards, and reporting solutions. Automated recurring data preparation, validation, and reporting activities contributing to a reported 80% automation of applicable project activities and 20% improvement in delivery efficiency.
-            </p>
+          <h2 class="hero-headline">
+            Turning Complex Technology Into <span class="highlight-accent">Scalable Business Outcomes.</span>
+          </h2>
+
+          <p class="hero-intro">
+            PMP®-certified technology professional specializing in B2B client implementation, technical program management, and enterprise AI & API workflow solutions. Proven track record across General Electric and enterprise clients of translating complex requirements into scalable digital architectures and governing end-to-end delivery.
+          </p>
+
+          <div class="hero-author-identity">
+            <div class="hero-name">GuruCharan Tanneeru</div>
+            <div class="hero-title">PMP® | AI Implementation | Technical Program Management</div>
           </div>
 
-          <div style="border-left: 3px solid var(--slate-400); padding-left: 1rem;">
-            <div style="display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;">
-              <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--navy-950);">Chapter Webmaster — PMI Pearl City Chapter Hyderabad (PMIPCC)</h3>
-              <span style="font-size: 0.8rem; font-weight: 600; color: var(--slate-500);">December 2025 – Present</span>
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              <span>Explore My Work</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf" class="btn btn-secondary btn-lg" id="heroDownloadResumeBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
+
+            <a href="#contact" class="hero-secondary-link">
+              <span>Get In Touch</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-expertise-strip" aria-label="Core Competencies">
+            <span class="expertise-pill">AI Implementation</span>
+            <span class="expertise-pill">API Integrations</span>
+            <span class="expertise-pill">Program Delivery</span>
+            <span class="expertise-pill">Workflow Automation</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Sophisticated Tech Architecture Panel -->
+        <div class="hero-right">
+          <div class="tech-panel-card">
+            <div class="tech-panel-glow"></div>
+            
+            <div class="panel-header">
+              <div class="panel-monogram">GT</div>
+              <div class="panel-status">
+                <span class="status-indicator"></span>
+                <span>Available for Leadership</span>
+              </div>
             </div>
-            <div style="font-size: 0.85rem; color: var(--navy-700); font-weight: 500; margin-bottom: 0.4rem;">Volunteer Leadership • Chapter Site & AI & Agile Conference 2026 Platform</div>
-            <p style="font-size: 0.875rem; color: var(--slate-600); line-height: 1.55;">
-              Led end-to-end client solution delivery for PMIPCC as lead technical implementation consultant. Implemented the AI & Agile Conference 2026 platform covering database architecture, backend services, Razorpay payment reconciliation with webhook automation, QR-based ticket verification, and Gemini API chatbot integration.
-            </p>
+
+            <div style="font-size: 0.775rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--cyan-400); font-weight: 700; margin-bottom: 0.5rem;">
+              Enterprise Architecture Framework
+            </div>
+
+            <div class="workflow-nodes-visual">
+              <div class="workflow-node-item">
+                <div class="node-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div>
+                  <div class="node-info-title">Gemini API & Document AI</div>
+                  <div class="node-info-sub">OCR classification, extraction & automated workflows</div>
+                </div>
+              </div>
+
+              <div class="workflow-node-item">
+                <div class="node-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="node-info-title">REST APIs & Webhooks</div>
+                  <div class="node-info-sub">Razorpay reconciliation, JSON pipelines & Smartsheet</div>
+                </div>
+              </div>
+
+              <div class="workflow-node-item">
+                <div class="node-icon-box">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="node-info-title">PMP® Governance & Delivery</div>
+                  <div class="node-info-sub">Scope, milestone tracking & global cross-functional UAT</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-footer-badges">
+              <span class="panel-tag">PMP® #3986026</span>
+              <span class="panel-tag">Azure Data Eng</span>
+              <span class="panel-tag">General Electric Experience</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Certifications & Education Section -->
-    <section class="preview-section" id="credentials" style="padding-top: 0;" aria-label="Certifications and Education">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem;">
-        <!-- Certifications -->
-        <div class="summary-card">
-          <h2>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="8" r="7"></circle>
-              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+    <!-- =========================================================
+         3. PROFESSIONAL TRUST STRIP
+         ========================================================= -->
+    <section class="trust-strip-section" aria-label="Key Competency Highlights">
+      <div class="trust-strip-container">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
-            Certifications
-          </h2>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.75rem;">
-            <li style="display: flex; justify-content: space-between; font-size: 0.875rem; border-bottom: 1px solid var(--slate-100); padding-bottom: 0.5rem;">
-              <span style="font-weight: 600; color: var(--navy-900);">Project Management Professional (PMP®)</span>
-              <span style="color: var(--slate-500); font-size: 0.8rem;">2026</span>
-            </li>
-            <li style="display: flex; justify-content: space-between; font-size: 0.875rem; border-bottom: 1px solid var(--slate-100); padding-bottom: 0.5rem;">
-              <span style="font-weight: 600; color: var(--navy-900);">Microsoft Certified: Azure Data Engineer Associate</span>
-              <span style="color: var(--slate-500); font-size: 0.8rem;">2023</span>
-            </li>
-            <li style="display: flex; justify-content: space-between; font-size: 0.875rem; border-bottom: 1px solid var(--slate-100); padding-bottom: 0.5rem;">
-              <span style="font-weight: 600; color: var(--navy-900);">Google IT Automation with Python Professional</span>
-              <span style="color: var(--slate-500); font-size: 0.8rem;">2024</span>
-            </li>
-            <li style="display: flex; justify-content: space-between; font-size: 0.875rem; border-bottom: 1px solid var(--slate-100); padding-bottom: 0.5rem;">
-              <span style="font-weight: 600; color: var(--navy-900);">Alteryx Designer Core</span>
-              <span style="color: var(--slate-500); font-size: 0.8rem;">2024</span>
-            </li>
-            <li style="display: flex; justify-content: space-between; font-size: 0.875rem;">
-              <span style="font-weight: 600; color: var(--navy-900);">AWS Academy Graduate — Cloud Architecting</span>
-              <span style="color: var(--slate-500); font-size: 0.8rem;">2021</span>
-            </li>
-          </ul>
+          </div>
+          <div class="trust-text">
+            <h3>AI & Automation</h3>
+            <p>Document intelligence, Gemini API & OCR pipelines</p>
+          </div>
         </div>
 
-        <!-- Education -->
-        <div class="summary-card">
-          <h2>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3>Technical Program Management</h3>
+            <p>PMP® methodologies, risk & dependency management</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3>Enterprise Integrations</h3>
+            <p>REST APIs, webhooks, Smartsheet & payment reconciliation</p>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="trust-text">
+            <h3>Client Implementation</h3>
+            <p>Requirements discovery, solution architecture & UAT readiness</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. ABOUT SECTION
+         ========================================================= -->
+    <section class="portfolio-section" id="about" aria-label="About GuruCharan Tanneeru">
+      <div class="section-editorial-header">
+        <div class="section-tag">Background & Approach</div>
+        <h2 class="section-title">Bridging Business Strategy and Technical Execution</h2>
+        <p class="section-subtitle">
+          Aligning multi-disciplinary engineering capabilities with executive business goals across enterprise and SaaS environments.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-editorial-prose">
+          <p>
+            I am a <strong>PMP®-certified technology professional</strong> specializing in B2B client implementation, technical program management, and scalable AI/API workflow solutions. Throughout my work with enterprise organizations like <strong>General Electric (GE)</strong>, I have focused on translating intricate client needs into scalable digital architectures and governing end-to-end delivery lifecycles.
+          </p>
+          <p>
+            My core strength is <strong>executive communication and technical alignment</strong>: bridging the gap between non-technical executive stakeholders and engineering teams. By translating complex architectural decisions, API constraints, and data flows into transparent business outcomes, I ensure seamless user adoption and stakeholder trust.
+          </p>
+          <p>
+            From deploying <strong>enterprise document intelligence engines</strong> and integrating <strong>Gemini API solutions</strong> to architecting robust REST API pipelines and automated payment reconciliation systems, I bring a structured, metrics-driven approach to every implementation.
+          </p>
+        </div>
+
+        <div class="about-pillars-container">
+          <div class="pillar-card">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+              </svg>
+              Structured Delivery Governance
+            </h4>
+            <p>Rigorous milestone tracking, scope containment, risk mitigation, and go-live readiness using proven PMP® frameworks.</p>
+          </div>
+
+          <div class="pillar-card">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              Pragmatic AI & API Automation
+            </h4>
+            <p>Hands-on implementation of document classification, OCR extraction, and webhook integrations that eliminate manual bottlenecks.</p>
+          </div>
+
+          <div class="pillar-card">
+            <h4>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+              Data Integrity & Observability
+            </h4>
+            <p>Data validation routines, automated reconciliation workflows, and operational dashboards that improve reporting accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. EXPERTISE SECTION (5 DOMAIN GROUPS)
+         ========================================================= -->
+    <section class="portfolio-section" id="expertise" style="background: #fafbfc; border-top: 1px solid var(--slate-200); border-bottom: 1px solid var(--slate-200);" aria-label="Technical and Program Expertise">
+      <div class="section-editorial-header">
+        <div class="section-tag">Capabilities</div>
+        <h2 class="section-title">Technical & Implementation Expertise</h2>
+        <p class="section-subtitle">
+          Specialized domains structured across engineering execution, program governance, and enterprise systems.
+        </p>
+      </div>
+
+      <div class="expertise-groups-container">
+        <!-- Group 1: AI & Intelligent Automation -->
+        <div class="expertise-group-row">
+          <div class="group-lead">
+            <div class="group-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3>AI & Intelligent Automation</h3>
+            <p>Applied document intelligence, LLM API integrations, and workflow automation.</p>
+          </div>
+          <div class="group-skills-list">
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Gemini API Integration</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Document Intelligence (OCR & Classification)</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>AI Prototyping (Google Antigravity & Claude Code)</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>MCP Integrations</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Contextual Date & Text Extraction</span>
+          </div>
+        </div>
+
+        <!-- Group 2: Program & Delivery Management -->
+        <div class="expertise-group-row">
+          <div class="group-lead">
+            <div class="group-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+            <h3>Program & Delivery Management</h3>
+            <p>PMP® methodologies, milestone management, and global cross-functional alignment.</p>
+          </div>
+          <div class="group-skills-list">
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>PMP® Methodologies</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Milestone & Scope Governance</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Cross-Functional Coordination</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Risk & Dependency Management</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>SLA Compliance & Escalation Paths</span>
+          </div>
+        </div>
+
+        <!-- Group 3: APIs & Enterprise Systems -->
+        <div class="expertise-group-row">
+          <div class="group-lead">
+            <div class="group-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3>APIs & Enterprise Systems</h3>
+            <p>Reliable integrations, webhook architectures, and SaaS orchestration.</p>
+          </div>
+          <div class="group-skills-list">
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>REST APIs & JSON Pipelines</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Webhooks & Event Handlers</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Razorpay Payment Reconciliation</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Signature Verification</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Smartsheet (Control Center, Dynamic View)</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>JIRA & Confluence Workflows</span>
+          </div>
+        </div>
+
+        <!-- Group 4: Data & Reporting -->
+        <div class="expertise-group-row">
+          <div class="group-lead">
+            <div class="group-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Data & Reporting</h3>
+            <p>Automated validation, pipeline health, and operational dashboarding.</p>
+          </div>
+          <div class="group-skills-list">
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Data Validation & Reconciliation</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>SQL, MySQL & MongoDB</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Python pandas</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Alteryx Designer</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Excel Financial & Operational Modeling</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Operational Reporting Dashboards</span>
+          </div>
+        </div>
+
+        <!-- Group 5: Client Implementation & Delivery -->
+        <div class="expertise-group-row">
+          <div class="group-lead">
+            <div class="group-badge-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3>Client Implementation & Delivery</h3>
+            <p>Discovery workshops, workflow mapping, UAT, and post-sales adoption.</p>
+          </div>
+          <div class="group-skills-list">
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Requirements Discovery</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Client Workflow Mapping</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Solution Architecture</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>User Onboarding & Enablement</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Functional UAT & Go-Live Readiness</span>
+            <span class="skill-tag-rich"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>Health-Check Diagnostics & Production Troubleshooting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         6. EXPERIENCE SECTION (VERTICAL TIMELINE)
+         ========================================================= -->
+    <section class="portfolio-section" id="experience" aria-label="Professional Experience Timeline">
+      <div class="section-editorial-header">
+        <div class="section-tag">Career History</div>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">
+          Demonstrated leadership across enterprise client programs, technical implementations, and volunteer initiatives.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Role 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role-title">Technical Program Manager</h3>
+              <span class="timeline-date-badge">June 2025 – March 2026</span>
+            </div>
+            <div class="timeline-org">General Electric (GE) | Consultant — PERSOL India</div>
+            <p class="timeline-description">
+              Led enterprise technology implementation initiatives by translating business unit requirements into technical workflows, solution delivery plans, and client adoption roadmaps. Partnered with internal client stakeholders and cross-functional teams across three global regions to align priorities, manage delivery dependencies, resolve blockers, and maintain implementation momentum.
+            </p>
+            <p class="timeline-description">
+              Spearheaded reporting and data-validation improvements that contributed to a reported <strong>30% improvement in reporting accuracy</strong>. Tracked implementation milestones, delivery risks, scope dependencies, and SLA compliance to support on-time rollouts and proactive escalation.
+            </p>
+            <div class="timeline-tags-group">
+              <span class="timeline-tech-tag">Program Management</span>
+              <span class="timeline-tech-tag">Document Intelligence</span>
+              <span class="timeline-tech-tag">Workflow Automation</span>
+              <span class="timeline-tech-tag">Data Validation</span>
+              <span class="timeline-tech-tag">Global Stakeholder Alignment</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role-title">Data Analyst</h3>
+              <span class="timeline-date-badge">March 2024 – May 2025</span>
+            </div>
+            <div class="timeline-org">General Electric (GE) | Consultant — PERSOL India</div>
+            <p class="timeline-description">
+              Configured and maintained enterprise data workflows, operational dashboards, and reporting solutions to support business analysis and decision-making for business unit clients. Automated recurring data preparation, validation, and reporting activities, contributing to a reported <strong>80% automation of applicable project activities</strong> and a <strong>20% improvement in delivery efficiency</strong>.
+            </p>
+            <div class="timeline-tags-group">
+              <span class="timeline-tech-tag">Data Workflows</span>
+              <span class="timeline-tech-tag">Automation</span>
+              <span class="timeline-tech-tag">Dashboards</span>
+              <span class="timeline-tech-tag">Cross-Timezone Collaboration</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 3 -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role-title">Data Analyst — Individual Contractor</h3>
+              <span class="timeline-date-badge">May 2023 – February 2024</span>
+            </div>
+            <div class="timeline-org">General Electric (GE)</div>
+            <p class="timeline-description">
+              Supported enterprise data analysis and reporting implementations, focusing on data accuracy, operational consistency, and client workflow improvements. Contributed to a reported <strong>40% reduction in manual process inefficiencies</strong> and <strong>30% reduction in reporting turnaround time</strong>.
+            </p>
+            <div class="timeline-tags-group">
+              <span class="timeline-tech-tag">Process Efficiency</span>
+              <span class="timeline-tech-tag">Reconciliation</span>
+              <span class="timeline-tech-tag">Reporting Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 4: Volunteer Leadership -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role-title">Chapter Webmaster & Solution Consultant</h3>
+              <span class="timeline-date-badge">December 2025 – Present</span>
+            </div>
+            <div class="timeline-org">PMI Pearl City Chapter Hyderabad (PMIPCC) • Volunteer Leadership</div>
+            <p class="timeline-description">
+              Led end-to-end client solution delivery for PMIPCC as lead technical implementation consultant. Implemented the AI & Agile Conference 2026 platform covering database architecture, backend services, Razorpay webhook reconciliation, and automated ticket generation with QR code check-in. Integrated Gemini API chatbot for member support.
+            </p>
+            <div class="timeline-tags-group">
+              <span class="timeline-tech-tag">PMIPCC Chapter</span>
+              <span class="timeline-tech-tag">Razorpay Webhooks</span>
+              <span class="timeline-tech-tag">Gemini API Chatbot</span>
+              <span class="timeline-tech-tag">React & Node.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 5: Independent & Earlier Experience -->
+        <div class="timeline-item">
+          <div class="timeline-node" aria-hidden="true"></div>
+          <div class="timeline-content-card">
+            <div class="timeline-header">
+              <h3 class="timeline-role-title">Independent Consultant & Developer Internships</h3>
+              <span class="timeline-date-badge">2022 – Present</span>
+            </div>
+            <div class="timeline-org">AI & Digital Solutions • Dhanekula Institute • PinkMoon Technologies</div>
+            <p class="timeline-description">
+              Deliver custom digital solutions, application prototypes, and AI-enabled workflows using Gemini API and Claude Code. Previously developed college administration portal features with payment gateway integration at Dhanekula Institute and supported web application backend functionality at PinkMoon Technologies.
+            </p>
+            <div class="timeline-tags-group">
+              <span class="timeline-tech-tag">Freelance AI Consulting</span>
+              <span class="timeline-tech-tag">Web Development</span>
+              <span class="timeline-tech-tag">API Integration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. SELECTED PROJECTS SECTION
+         ========================================================= -->
+    <section class="portfolio-section" id="projects" style="background: #fafbfc; border-top: 1px solid var(--slate-200); border-bottom: 1px solid var(--slate-200);" aria-label="Selected Enterprise Projects">
+      <div class="section-editorial-header">
+        <div class="section-tag">Case Studies & Initiatives</div>
+        <h2 class="section-title">Selected Enterprise Projects</h2>
+        <p class="section-subtitle">
+          Real-world technical initiatives, document intelligence solutions, and payment architectures documented in my professional experience.
+        </p>
+      </div>
+
+      <div class="projects-showcase-grid">
+        <!-- Project 1: G-EDI -->
+        <article class="project-feature-card">
+          <div class="project-banner-illustration">
+            <span class="banner-cat-badge">Enterprise Document AI</span>
+            <span class="banner-org-label">General Electric</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">G-EDI — Global Enterprise Document Intelligence Engine</h3>
+            <p class="project-description">
+              Contributed to an enterprise document intelligence initiative focused on document classification, metadata extraction, and compliance validation.
+            </p>
+            <div class="project-specs">
+              <div class="spec-line">
+                <strong>Business Need:</strong>
+                <span>Reduce manual document review time and standardize extraction across multiple jurisdictions.</span>
+              </div>
+              <div class="spec-line">
+                <strong>My Role:</strong>
+                <span>Project Management • Business Analysis • Development Contribution</span>
+              </div>
+              <div class="spec-line">
+                <strong>Approach:</strong>
+                <span>Automated validation processes to identify inconsistencies, anomalies, and format variations in unstructured files.</span>
+              </div>
+            </div>
+            <div class="project-tech-footer">
+              <span class="tech-bubble">Python</span>
+              <span class="tech-bubble">Node.js</span>
+              <span class="tech-bubble">OCR</span>
+              <span class="tech-bubble">OpenCV</span>
+              <span class="tech-bubble">Machine Learning</span>
+              <span class="tech-bubble">Validation Workflows</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: Chronos Intelligence Node -->
+        <article class="project-feature-card">
+          <div class="project-banner-illustration">
+            <span class="banner-cat-badge">AI Date Intelligence</span>
+            <span class="banner-org-label">General Electric</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Chronos Intelligence Node (CIN) — Date Intelligence System</h3>
+            <p class="project-description">
+              Contributed to an AI-powered date intelligence initiative focused on extracting and interpreting date information from PDFs, images, and diverse document formats.
+            </p>
+            <div class="project-specs">
+              <div class="spec-line">
+                <strong>Business Need:</strong>
+                <span>Resolve ambiguous or inconsistent date values in varied global document formats.</span>
+              </div>
+              <div class="spec-line">
+                <strong>Implementation:</strong>
+                <span>Extracted contextual date strings using surrounding document tokens, normalizing formats and detecting anomalies.</span>
+              </div>
+              <div class="spec-line">
+                <strong>Outcome:</strong>
+                <span>Supported broader goal of reducing manual data verification effort across enterprise downstream operations.</span>
+              </div>
+            </div>
+            <div class="project-tech-footer">
+              <span class="tech-bubble">Python</span>
+              <span class="tech-bubble">OCR</span>
+              <span class="tech-bubble">EasyOCR</span>
+              <span class="tech-bubble">Tesseract</span>
+              <span class="tech-bubble">Date Normalization</span>
+              <span class="tech-bubble">Anomaly Detection</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Enterprise Data Automation & Dashboards -->
+        <article class="project-feature-card">
+          <div class="project-banner-illustration">
+            <span class="banner-cat-badge">Operational Reporting</span>
+            <span class="banner-org-label">General Electric</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Enterprise Data Automation & Dashboard Suite</h3>
+            <p class="project-description">
+              Engineered recurring reporting workflows and operational dashboards for enterprise operational visibility, data consistency, and reliability.
+            </p>
+            <div class="project-specs">
+              <div class="spec-line">
+                <strong>Business Need:</strong>
+                <span>Eliminate repetitive manual data preparation across distributed teams spanning three time zones.</span>
+              </div>
+              <div class="spec-line">
+                <strong>Implementation:</strong>
+                <span>Configured data validation and automated reconciliation pipelines, standardizing metrics and reporting formats.</span>
+              </div>
+              <div class="spec-line">
+                <strong>Verified Impact:</strong>
+                <span>Contributed to 80% automation of applicable tasks, 30% accuracy improvement, and 40% reduction in manual inefficiencies.</span>
+              </div>
+            </div>
+            <div class="project-tech-footer">
+              <span class="tech-bubble">Smartsheet</span>
+              <span class="tech-bubble">Alteryx</span>
+              <span class="tech-bubble">Excel Modeling</span>
+              <span class="tech-bubble">SQL</span>
+              <span class="tech-bubble">Data Workflows</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: AI & Agile Conference Platform -->
+        <article class="project-feature-card">
+          <div class="project-banner-illustration">
+            <span class="banner-cat-badge">Full-Stack & Webhook Architecture</span>
+            <span class="banner-org-label">PMIPCC Hyderabad</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">AI & Agile Conference 2026 Registration Platform</h3>
+            <p class="project-description">
+              Implemented the end-to-end event registration and management platform covering database architecture, payment webhooks, and administrative tooling.
+            </p>
+            <div class="project-specs">
+              <div class="spec-line">
+                <strong>Payments:</strong>
+                <span>Integrated Razorpay server-side order creation, payment signature verification, and automated reconciliation webhooks.</span>
+              </div>
+              <div class="spec-line">
+                <strong>Ticketing:</strong>
+                <span>Automated PDF ticket generation with QR verification, email delivery with attachments, and attendee badge scanning.</span>
+              </div>
+              <div class="spec-line">
+                <strong>AI Chatbot:</strong>
+                <span>Integrated Gemini API conversational assistant to provide real-time guidance for conference attendees.</span>
+              </div>
+            </div>
+            <div class="project-tech-footer">
+              <span class="tech-bubble">React</span>
+              <span class="tech-bubble">Node.js</span>
+              <span class="tech-bubble">MySQL</span>
+              <span class="tech-bubble">Razorpay Webhooks</span>
+              <span class="tech-bubble">Gemini API</span>
+              <span class="tech-bubble">PM2</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. CERTIFICATIONS & EDUCATION SECTION
+         ========================================================= -->
+    <section class="portfolio-section" id="certifications" aria-label="Credentials, Certifications, and Education">
+      <div class="section-editorial-header">
+        <div class="section-tag">Credentials</div>
+        <h2 class="section-title">Certifications & Education</h2>
+        <p class="section-subtitle">
+          Industry-recognized certifications in program governance, cloud data engineering, and automation.
+        </p>
+      </div>
+
+      <div class="credentials-dual-grid">
+        <!-- Certifications List -->
+        <div class="certs-list-container">
+          <div class="cert-row-card">
+            <div class="cert-left-meta">
+              <div class="cert-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="cert-info">
+                <h4>Project Management Professional (PMP®)</h4>
+                <p>Project Management Institute (PMI) • Credential #3986026</p>
+              </div>
+            </div>
+            <span class="cert-year-tag">2026</span>
+          </div>
+
+          <div class="cert-row-card">
+            <div class="cert-left-meta">
+              <div class="cert-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                </svg>
+              </div>
+              <div class="cert-info">
+                <h4>Microsoft Certified: Azure Data Engineer Associate</h4>
+                <p>Microsoft</p>
+              </div>
+            </div>
+            <span class="cert-year-tag">2023</span>
+          </div>
+
+          <div class="cert-row-card">
+            <div class="cert-left-meta">
+              <div class="cert-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div class="cert-info">
+                <h4>Google IT Automation with Python Professional</h4>
+                <p>Google / Coursera</p>
+              </div>
+            </div>
+            <span class="cert-year-tag">2024</span>
+          </div>
+
+          <div class="cert-row-card">
+            <div class="cert-left-meta">
+              <div class="cert-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="cert-info">
+                <h4>Alteryx Designer Core</h4>
+                <p>Alteryx</p>
+              </div>
+            </div>
+            <span class="cert-year-tag">2024</span>
+          </div>
+
+          <div class="cert-row-card">
+            <div class="cert-left-meta">
+              <div class="cert-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+              </div>
+              <div class="cert-info">
+                <h4>AWS Academy Graduate — Cloud Architecting</h4>
+                <p>Amazon Web Services</p>
+              </div>
+            </div>
+            <span class="cert-year-tag">2021</span>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="education-editorial-card">
+          <div class="edu-icon-badge">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
               <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
             </svg>
-            Education
-          </h2>
-          <div style="margin-top: 0.75rem;">
-            <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--navy-900);">Bachelor of Technology (B.Tech) — Computer Science and Engineering</h3>
-            <p style="font-size: 0.85rem; color: var(--slate-600); margin-top: 0.25rem;">
-              Dhanekula Institute of Engineering and Technology | Jawaharlal Nehru Technological University
-            </p>
-            <div style="margin-top: 1.5rem; padding: 0.85rem 1rem; background: var(--blue-50); border-radius: var(--radius-sm); border: 1px solid var(--blue-100);">
-              <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--navy-700); letter-spacing: 0.05em; margin-bottom: 0.25rem;">Target Roles</div>
-              <p style="font-size: 0.825rem; color: var(--slate-700);">
-                AI Implementation Manager • Technical Implementation • SaaS Solutions • Workflow Automation
-              </p>
+          </div>
+          <h4>Bachelor of Technology (B.Tech)</h4>
+          <p style="font-weight: 600; color: var(--navy-900); font-size: 0.95rem; margin-bottom: 0.25rem;">
+            Computer Science and Engineering
+          </p>
+          <p class="institution-text">
+            Dhanekula Institute of Engineering and Technology | Jawaharlal Nehru Technological University
+          </p>
+
+          <div class="target-roles-box">
+            <h5>Target Leadership Roles</h5>
+            <p>AI Implementation Manager • Technical Implementation Manager • SaaS Solutions Architect • Technical Program Manager</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. RESUME ACTIONS SECTION (PORTFOLIO INTEGRATION)
+         ========================================================= -->
+    <section class="resume-section-wrapper" id="resume" aria-label="Official Resume Document Access">
+      <div class="resume-section-container">
+        <div class="resume-highlight-card">
+          <div class="resume-card-header">
+            <div class="resume-lead-info">
+              <div class="resume-doc-avatar" aria-hidden="true">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <div class="resume-lead-text">
+                <h3>Official 3-Page Master Resume</h3>
+                <p>AI Manager_GuruCharan.pdf • Authoritative PMP® Certified Document (Letter / 612 × 792 pt)</p>
+              </div>
+            </div>
+
+            <!-- Action Buttons Group -->
+            <div class="resume-action-buttons">
+              <button type="button" class="btn btn-secondary" id="sectionViewResumeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>View Fullscreen</span>
+              </button>
+
+              <button type="button" class="btn btn-primary" id="sectionPrintResumeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Print Resume</span>
+              </button>
+
+              <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf" class="btn btn-secondary" id="sectionDownloadResumeBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Expandable In-Page Preview Toggle (Preserves functionality without overwhelming home) -->
+          <div style="border-top: 1px solid var(--slate-100); padding-top: 1.5rem;">
+            <button type="button" id="toggleInlinePreviewBtn" class="btn btn-outline btn-sm" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              <span id="toggleInlinePreviewText">Show Embedded PDF Preview</span>
+            </button>
+            <div id="inlinePreviewContainer" style="display: none; margin-top: 1.5rem;">
+              <div id="previewMountPoint"></div>
+            </div>
+          </div>
+
+          <div class="resume-spec-badges">
+            <span class="spec-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Exact PDF Printing Fidelity (Zero HTML distortion)
+            </span>
+            <span class="spec-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              All 3 Original Pages Preserved
+            </span>
+            <span class="spec-badge-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Bit-for-Bit SHA-256 Verified Source
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         10. CONTACT SECTION (VERIFIED CHANNELS ONLY)
+         ========================================================= -->
+    <section class="contact-section" id="contact" aria-label="Contact Information">
+      <div class="contact-layout-grid">
+        <div>
+          <div class="section-tag">Let's Connect</div>
+          <h2 class="section-title">Have a Technology Challenge to Solve?</h2>
+          <p class="section-subtitle">
+            Open to senior technical program management, AI implementation, and enterprise workflow automation opportunities. Reach out directly through any of my verified channels below.
+          </p>
+          <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="mailto:guru.charan.tanneeru@gmail.com" class="btn btn-primary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Email GuruCharan</span>
+            </a>
+            <a href="https://linkedin.com/in/gurucharan-dev" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-channels-container">
+          <!-- Email -->
+          <div class="contact-channel-card">
+            <div class="channel-meta-left">
+              <div class="channel-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <h4>Direct Email</h4>
+                <a href="mailto:guru.charan.tanneeru@gmail.com">guru.charan.tanneeru@gmail.com</a>
+              </div>
+            </div>
+            <button type="button" class="copy-btn" data-copy="guru.charan.tanneeru@gmail.com">Copy</button>
+          </div>
+
+          <!-- Phone -->
+          <div class="contact-channel-card">
+            <div class="channel-meta-left">
+              <div class="channel-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <h4>Phone / WhatsApp</h4>
+                <a href="tel:+917995162550">+91 7995162550</a>
+              </div>
+            </div>
+            <button type="button" class="copy-btn" data-copy="+917995162550">Copy</button>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="contact-channel-card">
+            <div class="channel-meta-left">
+              <div class="channel-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <h4>LinkedIn Profile</h4>
+                <a href="https://linkedin.com/in/gurucharan-dev" target="_blank" rel="noopener noreferrer">linkedin.com/in/gurucharan-dev</a>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/gurucharan-dev" target="_blank" rel="noopener noreferrer" class="copy-btn">Open</a>
+          </div>
+
+          <!-- Website -->
+          <div class="contact-channel-card">
+            <div class="channel-meta-left">
+              <div class="channel-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <h4>Personal Website</h4>
+                <a href="https://gurucharan.dev" target="_blank" rel="noopener noreferrer">gurucharan.dev</a>
+              </div>
+            </div>
+            <a href="https://gurucharan.dev" target="_blank" rel="noopener noreferrer" class="copy-btn">Open</a>
+          </div>
+
+          <!-- Location -->
+          <div class="contact-channel-card">
+            <div class="channel-meta-left">
+              <div class="channel-icon-circle">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="channel-info">
+                <h4>Location</h4>
+                <span>Vijayawada, Andhra Pradesh, India</span>
+              </div>
             </div>
           </div>
         </div>
@@ -192,32 +1074,64 @@
     </section>
   </main>
 
-  <!-- Site Footer -->
+  <!-- =========================================================
+       11. SITE FOOTER
+       ========================================================= -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-identity">
-          <h4>GuruCharan Tanneeru, PMP®</h4>
-          <p>AI Implementation • Technical Program Management • API Integrations</p>
+      <div class="footer-main-row">
+        <div class="footer-brand">
+          <h3>GuruCharan Tanneeru, PMP®</h3>
+          <p>
+            AI Implementation • Technical Program Management • API Integrations. Transforming complex architectures into scalable business outcomes.
+          </p>
         </div>
-        <div class="footer-links">
-          <a href="./assets/GuruCharan_Resume.pdf" target="_blank" rel="noopener noreferrer">Direct PDF Link</a>
-          <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf">Direct Download</a>
-          <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="https://linkedin.com/in/gurucharan-dev" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-          <span style="color: rgba(255,255,255,0.2);">•</span>
-          <a href="https://gurucharan.dev" target="_blank" rel="noopener noreferrer">gurucharan.dev</a>
+
+        <div class="footer-nav-columns">
+          <div class="footer-col">
+            <h4>Portfolio</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#expertise">Expertise</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Credentials & Resume</h4>
+            <ul>
+              <li><a href="#certifications">Certifications</a></li>
+              <li><a href="#resume">Resume Document</a></li>
+              <li><a href="./assets/GuruCharan_Resume.pdf" download="GuruCharan_Resume.pdf">Download Master PDF</a></li>
+              <li><a href="#" id="footerPrintResumeBtn">Print Master PDF</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://linkedin.com/in/gurucharan-dev" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></li>
+              <li><a href="https://gurucharan.dev" target="_blank" rel="noopener noreferrer">gurucharan.dev</a></li>
+              <li><a href="mailto:guru.charan.tanneeru@gmail.com">Email Direct</a></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div>Original Document: <code>AI Manager_GuruCharan.pdf</code> (Letter, 3 Pages, 1.7 MB)</div>
-        <div>Built for 100% Exact PDF Printing Fidelity.</div>
+
+      <div class="footer-bottom-row">
+        <div>
+          © <span id="currentYear">2026</span> GuruCharan Tanneeru. All rights reserved.
+        </div>
+        <div style="color: var(--slate-500);">
+          Master Document: <code>AI Manager_GuruCharan.pdf</code> (3 Pages • Exact PDF Fidelity Preserved)
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Application Script Module -->
+  <!-- Modular Application Orchestrator -->
   <script type="module" src="./js/app.js"></script>
 </body>
 </html>

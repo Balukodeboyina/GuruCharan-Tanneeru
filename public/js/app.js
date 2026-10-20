@@ -1,14 +1,12 @@
-import { ResumeHero } from './components/ResumeHero.js';
-import { ResumeActions } from './components/ResumeActions.js';
 import { ResumePreview } from './components/ResumePreview.js';
 import { ResumeViewer } from './components/ResumeViewer.js';
 import { PrintResumeButton } from './components/PrintResumeButton.js';
 import { DownloadResumeButton } from './components/DownloadResumeButton.js';
 
 /**
- * Main Application Orchestrator
+ * Main Portfolio Application Orchestrator
  */
-class ResumeApp {
+class PortfolioApp {
   constructor() {
     this.pdfUrl = './assets/GuruCharan_Resume.pdf';
     this.pdfFileName = 'GuruCharan_Resume.pdf';
@@ -20,115 +18,275 @@ class ResumeApp {
 
     this.viewer = null;
     this.preview = null;
-    this.actions = null;
-    this.hero = null;
+    this.printer = null;
+    this.isInlinePreviewMounted = false;
   }
 
   init() {
-    console.info('Initializing GuruCharan Resume Application...');
+    console.info('Initializing GuruCharan Tanneeru Portfolio Application...');
 
-    // 1. Initialize Dedicated Fullscreen Viewer
+    // 1. Initialize Reusable Master PDF Components
+    this.printer = new PrintResumeButton({
+      pdfUrl: this.pdfUrl,
+      pdfFileName: this.pdfFileName
+    });
+
     this.viewer = new ResumeViewer({
       pdfUrl: this.pdfUrl,
       pdfFileName: this.pdfFileName
     });
     document.body.appendChild(this.viewer.render());
 
-    // 2. Initialize Hero Section
-    this.hero = new ResumeHero();
-    const heroMount = document.getElementById('heroMountPoint');
-    if (heroMount) {
-      heroMount.appendChild(this.hero.render());
-    }
+    // 2. Wire Header & Mobile Actions
+    this.initHeaderAndNav();
 
-    // 3. Initialize Hero Action Bar
-    this.actions = new ResumeActions({
-      pdfUrl: this.pdfUrl,
-      pdfFileName: this.pdfFileName,
-      onViewClick: () => this.viewer.open(),
-      onPrintClick: () => console.log('Print initiated from hero action bar')
-    });
-    const actionBarMount = document.getElementById('heroActionBarContainer');
-    if (actionBarMount) {
-      actionBarMount.appendChild(this.actions.render());
-    }
+    // 3. Wire Resume Section Actions & In-Page Preview Toggle
+    this.initResumeSection();
 
-    // 4. Initialize Resume Preview Section
-    this.preview = new ResumePreview({
-      pdfUrl: this.pdfUrl,
-      pdfFileName: this.pdfFileName,
-      pageImages: this.pageImages,
-      onExpandClick: () => this.viewer.open()
-    });
-    const previewMount = document.getElementById('previewMountPoint');
-    if (previewMount) {
-      previewMount.appendChild(this.preview.render());
-    }
+    // 4. Wire Contact Section Copy Handlers
+    this.initContactActions();
 
-    // 5. Initialize Header Actions
-    this.initHeaderActions();
+    // 5. Active Scroll Spy & Header Blur Effect
+    this.initScrollSpy();
 
-    // 6. Global Keyboard Shortcuts
-    this.initKeyboardShortcuts();
+    // 6. Dynamic Year & Global Keyboard Shortcuts
+    this.initGlobalFeatures();
 
-    console.info('GuruCharan Resume Application initialized successfully.');
+    console.info('Portfolio Application initialized successfully.');
   }
 
-  initHeaderActions() {
-    const headerViewBtn = document.getElementById('headerViewBtn');
-    const headerPrintBtn = document.getElementById('headerPrintBtn');
-    const headerDownloadBtn = document.getElementById('headerDownloadBtn');
+  initHeaderAndNav() {
+    // Header Print Trigger
+    const headerPrintBtn = document.getElementById('headerPrintResumeBtn');
+    if (headerPrintBtn) {
+      headerPrintBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.printer.triggerPrint();
+      });
+    }
 
-    if (headerViewBtn) {
-      headerViewBtn.addEventListener('click', (e) => {
+    // Mobile Print Trigger
+    const mobilePrintBtn = document.getElementById('mobilePrintBtn');
+    if (mobilePrintBtn) {
+      mobilePrintBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.closeMobileMenu();
+        this.printer.triggerPrint();
+      });
+    }
+
+    // Footer Print Trigger
+    const footerPrintBtn = document.getElementById('footerPrintResumeBtn');
+    if (footerPrintBtn) {
+      footerPrintBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        this.printer.triggerPrint();
+      });
+    }
+
+    // Mobile Hamburger Menu Toggle
+    const menuToggleBtn = document.getElementById('mobileMenuToggleBtn');
+    const mobileDrawer = document.getElementById('mobileNavDrawer');
+
+    if (menuToggleBtn && mobileDrawer) {
+      menuToggleBtn.addEventListener('click', () => {
+        const isOpen = mobileDrawer.classList.contains('open');
+        if (isOpen) {
+          this.closeMobileMenu();
+        } else {
+          this.openMobileMenu();
+        }
+      });
+
+      // Close mobile drawer when any link is clicked
+      mobileDrawer.querySelectorAll('.mobile-nav-link').forEach((link) => {
+        link.addEventListener('click', () => this.closeMobileMenu());
+      });
+    }
+  }
+
+  openMobileMenu() {
+    const menuToggleBtn = document.getElementById('mobileMenuToggleBtn');
+    const mobileDrawer = document.getElementById('mobileNavDrawer');
+    if (mobileDrawer) {
+      mobileDrawer.classList.add('open');
+      mobileDrawer.setAttribute('aria-hidden', 'false');
+    }
+    if (menuToggleBtn) {
+      menuToggleBtn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  closeMobileMenu() {
+    const menuToggleBtn = document.getElementById('mobileMenuToggleBtn');
+    const mobileDrawer = document.getElementById('mobileNavDrawer');
+    if (mobileDrawer) {
+      mobileDrawer.classList.remove('open');
+      mobileDrawer.setAttribute('aria-hidden', 'true');
+    }
+    if (menuToggleBtn) {
+      menuToggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  initResumeSection() {
+    // Section View Resume (opens full dedicated modal)
+    const viewBtn = document.getElementById('sectionViewResumeBtn');
+    if (viewBtn) {
+      viewBtn.addEventListener('click', (e) => {
         e.preventDefault();
         this.viewer.open();
       });
     }
 
-    if (headerPrintBtn) {
-      const printer = new PrintResumeButton({
-        pdfUrl: this.pdfUrl,
-        pdfFileName: this.pdfFileName
-      });
-      headerPrintBtn.addEventListener('click', (e) => {
+    // Section Print Resume
+    const printBtn = document.getElementById('sectionPrintResumeBtn');
+    if (printBtn) {
+      printBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        printer.triggerPrint();
+        this.printer.triggerPrint();
       });
     }
 
-    if (headerDownloadBtn) {
-      headerDownloadBtn.href = this.pdfUrl;
-      headerDownloadBtn.download = this.pdfFileName;
+    // Expandable In-Page Preview Toggle
+    const toggleBtn = document.getElementById('toggleInlinePreviewBtn');
+    const toggleText = document.getElementById('toggleInlinePreviewText');
+    const previewContainer = document.getElementById('inlinePreviewContainer');
+    const mountPoint = document.getElementById('previewMountPoint');
+
+    if (toggleBtn && previewContainer && mountPoint) {
+      toggleBtn.addEventListener('click', () => {
+        const isHidden = previewContainer.style.display === 'none';
+
+        if (isHidden) {
+          // Mount ResumePreview if not already mounted
+          if (!this.isInlinePreviewMounted) {
+            this.preview = new ResumePreview({
+              pdfUrl: this.pdfUrl,
+              pdfFileName: this.pdfFileName,
+              pageImages: this.pageImages,
+              onExpandClick: () => this.viewer.open()
+            });
+            mountPoint.appendChild(this.preview.render());
+            this.isInlinePreviewMounted = true;
+          }
+
+          previewContainer.style.display = 'block';
+          toggleText.textContent = 'Hide Embedded PDF Preview';
+          previewContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          previewContainer.style.display = 'none';
+          toggleText.textContent = 'Show Embedded PDF Preview';
+        }
+      });
     }
   }
 
-  initKeyboardShortcuts() {
-    const printer = new PrintResumeButton({
-      pdfUrl: this.pdfUrl,
-      pdfFileName: this.pdfFileName
-    });
+  initContactActions() {
+    // One-Click Copy Buttons for Email and Phone
+    document.querySelectorAll('.copy-btn[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const textToCopy = btn.getAttribute('data-copy');
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(textToCopy);
+          } else {
+            // Fallback for non-HTTPS or older browsers
+            const input = document.createElement('input');
+            input.value = textToCopy;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+          }
 
+          const originalText = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.style.color = '#10b981';
+          btn.style.borderColor = '#10b981';
+
+          setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.color = '';
+            btn.style.borderColor = '';
+          }, 2000);
+        } catch (err) {
+          console.warn('Clipboard write failed:', err);
+        }
+      });
+    });
+  }
+
+  initScrollSpy() {
+    const siteHeader = document.getElementById('siteHeader');
+    const navLinks = document.querySelectorAll('.nav-desktop .nav-link');
+    const sections = [
+      document.getElementById('home'),
+      document.getElementById('about'),
+      document.getElementById('expertise'),
+      document.getElementById('experience'),
+      document.getElementById('projects'),
+      document.getElementById('certifications'),
+      document.getElementById('contact')
+    ].filter(Boolean);
+
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+
+      // Header elevation shadow
+      if (siteHeader) {
+        if (scrollY > 20) {
+          siteHeader.classList.add('scrolled');
+        } else {
+          siteHeader.classList.remove('scrolled');
+        }
+      }
+
+      // Active section highlight
+      let currentSectionId = '';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      if (currentSectionId) {
+        navLinks.forEach((link) => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    }, { passive: true });
+  }
+
+  initGlobalFeatures() {
+    // Dynamic Footer Year
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Global Keyboard Shortcuts
     window.addEventListener('keydown', (e) => {
-      // Don't intercept if user is typing in an input
+      // Ignore if user is inside an input/textarea
       if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) {
         return;
       }
 
-      // Check for 'p' or 'P' without modifiers (or allow Cmd/Ctrl+P to trigger our dedicated print toast)
+      // Ctrl+P / Cmd+P: Intercept to print the authoritative master PDF directly!
       if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 'P')) {
-        // Intercept standard window.print to prevent printing the web HTML,
-        // redirecting directly to the authoritative PDF print!
         e.preventDefault();
-        printer.triggerPrint();
+        this.printer.triggerPrint();
       } else if (!e.ctrlKey && !e.metaKey && !e.altKey) {
         if (e.key === 'v' || e.key === 'V') {
           this.viewer.open();
-        } else if (e.key === 'd' || e.key === 'D') {
-          const downloadAnchor = document.createElement('a');
-          downloadAnchor.href = this.pdfUrl;
-          downloadAnchor.download = this.pdfFileName;
-          downloadAnchor.click();
+        } else if (e.key === 'Escape') {
+          this.viewer.close();
+          this.closeMobileMenu();
         }
       }
     });
@@ -137,6 +295,6 @@ class ResumeApp {
 
 // Bootstrap on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
-  const app = new ResumeApp();
+  const app = new PortfolioApp();
   app.init();
 });
